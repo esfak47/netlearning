@@ -1,0 +1,30 @@
+﻿@model WebApplication1.ViewModels.StudentViewModel
+
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<h2>Detail</h2>
+
+<div>
+    <h4>StudentViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.age)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.age)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>

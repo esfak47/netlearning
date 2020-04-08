@@ -1,0 +1,21 @@
+﻿@using WebApplication1.Model
+@using WebApplication1.ViewModels
+@model HomeIndexViewModel
+
+<h2>Hello From index.cshtml</h2>
+
+
+<body>
+    <h3>student info </h3>
+    <ul>
+        @foreach (var s in Model.students)
+        {
+        <li>@s.name (@s.age)   <a asp-action="Detail" asp-route-id="@s.id">明细</a></li>
+        }
+
+    </ul>
+    <div>
+        <a asp-action="Create">创建</a>
+    </div>
+
+</body>
